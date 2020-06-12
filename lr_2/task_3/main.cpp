@@ -3,6 +3,7 @@
 #include "automobile.h"
 #include <iostream>
 
+// Печатает инфу об объекте класса Самолет.
 void printPlane() {
     Plane plane("boeing 737", "Minsk");
     
@@ -15,6 +16,7 @@ void printPlane() {
     cout << "Time for 1000 km: " << plane.getTime(1000) << " h" << endl;     
 }
 
+// Печатает инфу об объекте класса Поезд.
 void printTrain() {
     Train train("Тепловоз ТЭП70БС", "Kiev");
 
@@ -27,6 +29,7 @@ void printTrain() {
     cout << "Time for 1000 km: " << train.getTime(1000) << " h" << endl;
 }
 
+// Печатает инфу об объекте класса Автомобиль.
 void printAutomobile() {
     Automobile automobile("Toyota Camry", "Moskow");
 

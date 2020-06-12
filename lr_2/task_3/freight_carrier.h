@@ -3,17 +3,22 @@
 
 using namespace std;
 
+// Класс Грузоперевозчик.
 class FreightCarrier{
+    // Константы расстояний между городами.
     static const int MINSK_MOSKOW = 718;
     static const int MINSK_KIEV = 520;
     static const int MOSKOW_KIEV = 865;
 protected:
-    string name;
-    string city;
+    // Поля класса перевозчик.
+    string name; // Имя транспортного средства.
+    string city; // Город, в котором он находится.
 public:
+    // Конструктор копирования.
     FreightCarrier(string n, string c) : 
         name(n), city(c) {}
     
+    // Ниже находятся геттеры полей.
     string getName() {
         return name;
     }
@@ -22,6 +27,10 @@ public:
         return city;
     }
     
+    // Принимат название города(string),
+    // Реализованы кейсы для трех городов.
+    // Возвращает константу расстояние между городами,
+    // В случае ошибки, возвращет -1.
     double getDistance(string dest) {
         if(city == dest)
             return 0;

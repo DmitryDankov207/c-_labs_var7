@@ -3,6 +3,7 @@
 
 using namespace std;
 
+// Печатает инфу о полях класса Студент.
 void printStInfo(string name, 
             int age, int course) {
     cout << "\nName: " << name << endl;
@@ -10,9 +11,11 @@ void printStInfo(string name,
     cout << "Course: " << course << endl;
 }
 
+// Печатает инфу о полях класса Выпускник.
 void printGradStInfo(string name, int age, 
             int course, int grYear) {
-    printStInfo(name, age, course);
+    // Чтобы избежать дублирования, вызываем printStInfo.
+    printStInfo(name, age, course); 
     cout << "Graduation year: " << grYear << endl;
 }
 
